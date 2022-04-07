@@ -19,5 +19,10 @@ func main() {
 
 	elem = 2
 	fmt.Println("Add a key-element pair to a nil map...")
-	m["two"] = elem // 这里会引发panic。
+	//m["two"] = elem // 这里会引发panic。
+
+	var m2 = map[string]int{}
+	m2["two"] = elem //不会panic
+	var m3 = make(map[string]int)
+	m3["two"] = elem
 }
